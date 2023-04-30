@@ -1,5 +1,65 @@
-$color: #aaa;
+$keyBackground: #aaa;
+$keyColor: #ffffff;
+$keyboardColor: #4a4a4a;
 
-body {
-    background-color: $color;
+.textarea {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.keyboard {
+    max-width: 700px;
+    margin: 0 auto;
+
+    background-color: $keyboardColor;
+    border-radius: 15px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    & .key {
+        min-height: 40px;
+        min-width: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 18px;
+        color: $keyColor;
+        background-color: $keyBackground;
+        transition: .3s ease;
+        
+        & > span > span {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: $keyColor;
+                color: $keyBackground;
+            }
+        }
+
+        &.hovered {
+            border-radius: 7px;
+            background-color: rgb(255, 83, 83);
+            color: white;
+        }
+
+    }
 }
