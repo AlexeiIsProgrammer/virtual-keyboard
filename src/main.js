@@ -1,20 +1,84 @@
 import data from './data/keys.json'
 
 let keyboardState = 'caseDown'
+let textarea
 
-async function getKeys () {
+async function getKeys() {
     return data
 }
 
-function resetVisibles () {
+function addDescription() {
+    const OS = document.createElement('p')
+    const changeLanguage = document.createElement('p')
+
+    OS.innerHTML = "Клавиатура создана в операционной системе Windows"
+    changeLanguage.innerHTML = "Для переключения языка комбинация: ctrl + alt"
+
+    const descriptionBlock = document.createElement('div')
+    descriptionBlock.className = "description"
+    descriptionBlock.append(OS, changeLanguage)
+
+    return descriptionBlock
+}
+
+function deleteAfter(myField) {
+    const myFieldInner = myField
+    const startPos = myFieldInner.selectionStart;
+    const endPos = myFieldInner.selectionEnd;
+    const cursorPos = myFieldInner.value.substring(0, startPos).length
+
+    myFieldInner.value = myFieldInner.value.substring(0, startPos)
+        + myFieldInner.value.substring(endPos + 1, myFieldInner.value.length);
+
+    myField.setSelectionRange(cursorPos, cursorPos)
+}
+
+function deleteBefore(myField) {
+    const myFieldInner = myField
+    const startPos = myFieldInner.selectionStart;
+    const endPos = myFieldInner.selectionEnd;
+
+    if (startPos === 0)
+        return
+
+    const cursorPos = myFieldInner.value.substring(0, startPos - 1).length
+
+    myFieldInner.value = myFieldInner.value.substring(0, startPos - 1)
+        + myFieldInner.value.substring(endPos, myFieldInner.value.length);
+
+    myField.setSelectionRange(cursorPos, cursorPos)
+}
+
+function resetVisibles() {
     const allKeyButtons = document.querySelectorAll('.keyboard .key > span > span')
 
     allKeyButtons.forEach(el => el.classList.remove('active'))
 }
 
+function insertAtCursor(myField, myValue) {
+    const myFieldInner = myField
+
+    if (document.selection) {
+        myFieldInner.focus();
+        const sel = document.selection.createRange();
+        sel.text = myValue;
+    }
+    else if (myFieldInner.selectionStart || myFieldInner.selectionStart === '0') {
+        const startPos = myFieldInner.selectionStart;
+        const endPos = myFieldInner.selectionEnd;
+        const cursorPos = myFieldInner.value.substring(0, startPos).length + myValue.length
+        myFieldInner.value = myFieldInner.value.substring(0, startPos)
+            + myValue
+            + myFieldInner.value.substring(endPos, myFieldInner.value.length);
+
+        myField.setSelectionRange(cursorPos, cursorPos)
+    } else {
+        myFieldInner.value += myValue;
+    }
+}
 
 function createTextArea() {
-    const textarea = document.createElement('textarea')
+    textarea = document.createElement('textarea')
     textarea.className = 'textarea'
     textarea.rows = 10
 
@@ -28,10 +92,19 @@ function createKeyboard() {
     return keyboard
 }
 
+let language = 'rus'
+
+function fillState() {
+    resetVisibles()
+
+    const letters = document.querySelectorAll(`.${language} .${keyboardState}`)
+    letters.forEach(el => el.classList.add('active'))
+}
+
 function createElement(element) {
-    const createdElement = document.createElement('div')
+    const createdElement = document.createElement('button')
     createdElement.className = `key ${element.name}`
-    
+
     const rus = document.createElement('span')
     rus.className = 'rus'
 
@@ -74,45 +147,88 @@ function createElement(element) {
 
     eng.append(caseDownEng, shiftUpEng, capsEng, shiftCapsEng)
 
-    createdElement.append(rus, eng) 
+    createdElement.append(rus, eng)
+
+    createdElement.addEventListener('click', () => {
+
+        let elementText = createdElement.querySelector('span.active').innerHTML
+
+        if (elementText === 'Alt' || elementText === 'Ctrl') {
+            return
+        }
+
+        if (elementText === 'Backspace') {
+            deleteBefore(textarea)
+            return
+        }
+
+        if (elementText === 'Del') {
+            deleteAfter(textarea)
+            return
+        }
+
+        if (elementText === 'Tab') {
+            elementText = '\t'
+        }
+
+        if (elementText === 'Enter') {
+            console.log('ent');
+            elementText = '\n'
+        }
+
+        if (elementText === 'CapsLock') {
+
+            if (keyboardState === 'caps') {
+                createdElement.classList.remove('capsed')
+                keyboardState = 'caseDown'
+            } else if (keyboardState === 'shiftUp') {
+                createdElement.classList.add('capsed')
+                keyboardState = 'shiftCaps'
+            }
+            else if (keyboardState === 'shiftCaps') {
+                createdElement.classList.remove('capsed')
+                keyboardState = 'shiftUp'
+            } else {
+                createdElement.classList.add('capsed')
+                keyboardState = 'caps'
+            }
+
+            fillState()
+
+            return
+        }
+
+        if (elementText === 'Shift') {
+            return
+        }
+
+        insertAtCursor(textarea, elementText)
+    })
+
+
+    createdElement.addEventListener('mousedown', () => {
+        const elementText = createdElement.querySelector('span.active').innerHTML
+
+        if (elementText === 'Shift' && keyboardState !== 'shiftCaps') {
+
+            keyboardState = keyboardState === 'caps' ? 'shiftCaps' : 'shiftUp'
+            fillState()
+        }
+    })
+
+    createdElement.addEventListener('mouseup', () => {
+        const elementText = createdElement.querySelector('span.active').innerHTML
+        if (elementText === 'Shift') {
+            keyboardState = keyboardState === 'shiftCaps' ? 'caps' : 'caseDown'
+            fillState()
+        }
+    })
 
     return createdElement
 }
 
-function insertAtCursor(myField, myValue) {
-    const myFieldInner = myField
-
-    if (document.selection) {
-        myFieldInner.focus();
-        const sel = document.selection.createRange();
-        sel.text = myValue;
-    }
-    else if (myFieldInner.selectionStart || myFieldInner.selectionStart === '0') {
-        const startPos = myFieldInner.selectionStart;
-        const endPos = myFieldInner.selectionEnd;
-        myFieldInner.value = myFieldInner.value.substring(0, startPos)
-            + myValue
-            + myFieldInner.value.substring(endPos, myFieldInner.value.length);
-
-    } else {
-        myFieldInner.value += myValue;
-    }
-
-
-}
-
-
-let language = 'rus' 
-
-function fillState () {
-    resetVisibles()
-
-    const letters = document.querySelectorAll(`.${language} .${keyboardState}`)
-    letters.forEach(el => el.classList.add('active'))
-}
-
-getKeys().then( keysArr => {
-    const textarea = createTextArea()
+getKeys().then(keysArr => {
+    textarea = createTextArea()
 
     textarea.addEventListener('keydown', (e) => {
         e.preventDefault()
@@ -124,52 +240,96 @@ getKeys().then( keysArr => {
         keyboard.append(createElement(keyElement))
     })
 
-    document.body.append(textarea, keyboard)
+    document.body.append(textarea, keyboard, addDescription())
 
     fillState()
 
     window.addEventListener('keydown', (e) => {
 
+        if (!keysArr.some(el => el.name === e.code))
+            return
+
         e.preventDefault()
 
         const elementName = document.querySelector(`.${e.code}`)
         elementName.classList.add('hovered')
-    
-        if(e.key === 'Control' && e.key === 'Alt') {
+        let insertedValue = elementName.querySelector('.active').innerHTML
+
+        if (e.altKey && e.ctrlKey) {
             console.log('Смена');
             language = language === 'rus' ? 'eng' : 'rus'
             fillState()
-    
+
             return
         }
-    
-        if (e.code === 'CapsLock') {
-    
-            if(keyboardState === 'caps') {
+
+        if (e.altKey || e.ctrlKey) {
+            return
+        }
+
+        if (e.key === 'CapsLock') {
+
+            if (e.repeat)
+                return
+
+            if (keyboardState === 'caps') {
+                elementName.classList.remove('capsed')
                 keyboardState = 'caseDown'
             } else if (keyboardState === 'shiftUp') {
+                elementName.classList.add('capsed')
                 keyboardState = 'shiftCaps'
             }
-            else {
+            else if (keyboardState === 'shiftCaps') {
+                elementName.classList.remove('capsed')
+                keyboardState = 'shiftUp'
+            } else {
+                elementName.classList.add('capsed')
                 keyboardState = 'caps'
             }
-            
+
             fillState()
+
+            return
         }
-    
+
         if (e.key === 'Shift' && keyboardState !== 'shiftCaps') {
+            if (e.repeat)
+                return
+
             keyboardState = keyboardState === 'caps' ? 'shiftCaps' : 'shiftUp'
             fillState()
+
+            return
+        }
+
+        if (e.key === 'Backspace') {
+            deleteBefore(textarea)
+            return
+        }
+
+        if (e.key === 'Delete') {
+            deleteAfter(textarea)
+            return
+        }
+
+        if (e.key === 'Tab') {
+            insertedValue = '\t'
+        }
+
+        if (e.key === 'Enter') {
+            console.log('ent');
+            insertedValue = '\n'
         }
 
         //  Вставка значения
 
-        const insertedValue = e.key
-
         insertAtCursor(textarea, insertedValue)
     })
-    
+
     window.addEventListener('keyup', (e) => {
+        if (!keysArr.some(el => el.name === e.code))
+            return
+
         const elementName = document.querySelector(`.${e.code}`)
         elementName.classList.remove('hovered')
 
@@ -177,7 +337,6 @@ getKeys().then( keysArr => {
             keyboardState = keyboardState === 'shiftCaps' ? 'caps' : 'caseDown'
             fillState()
         }
-    
     })
 
 }).catch(e => {

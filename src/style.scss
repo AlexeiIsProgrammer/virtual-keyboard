@@ -2,6 +2,11 @@ $keyBackground: #aaa;
 $keyColor: #ffffff;
 $keyboardColor: #4a4a4a;
 
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 16px;
+}
+
 .textarea {
     width: 100%;
     max-width: 700px;
@@ -12,19 +17,24 @@ $keyboardColor: #4a4a4a;
 }
 
 .keyboard {
-    max-width: 700px;
+    max-width: 718px;
     margin: 0 auto;
 
-    background-color: $keyboardColor;
     border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 6px;
+    background-color: $keyboardColor;
 
     & .key {
+        font-size: 16px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        outline: none;
+        border: none;
+
         min-height: 40px;
         min-width: 40px;
 
@@ -34,12 +44,11 @@ $keyboardColor: #4a4a4a;
 
         cursor: pointer;
         border-radius: 5px;
-        padding: 10px;
-        font-size: 18px;
+        padding: 5px;
         color: $keyColor;
         background-color: $keyBackground;
-        transition: .3s ease;
-        
+        transition: 0.3s ease;
+
         & > span > span {
             display: none;
 
@@ -55,11 +64,54 @@ $keyboardColor: #4a4a4a;
             }
         }
 
-        &.hovered {
+        &.capsed,
+        &.hovered,
+        &:active {
             border-radius: 7px;
             background-color: rgb(255, 83, 83);
             color: white;
         }
+    }
 
+    & .Enter,
+    & .ShiftRight {
+        width: 76px;
+    }
+
+    & .Backspace,
+    & .CapsLock,
+    & .ShiftLeft {
+        width: 110px;
+    }
+
+    & .Tab {
+        width: 50px;
+    }
+
+    & .Space {
+        width: 340px;
+    }
+
+    & .Delete {
+        width: 44px;
+    }
+
+    & .AltLeft,
+    & .AltRight,
+    & .ArrowUp,
+    & .ArrowLeft,
+    & .ArrowDown,
+    & .ArrowRight,
+    & .Backspace,
+    & .CapsLock,
+    & .ControlLeft,
+    & .ControlRight,
+    & .Delete,
+    & .Enter,
+    & .ShiftLeft,
+    & .ShiftRight,
+    & .Tab,
+    & .MetaLeft {
+        background-color: black;
     }
 }
