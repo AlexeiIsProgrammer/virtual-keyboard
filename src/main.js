@@ -92,6 +92,7 @@ function createKeyboard() {
     return keyboard
 }
 
+
 let language = 'rus'
 
 function fillState() {
@@ -100,6 +101,17 @@ function fillState() {
     const letters = document.querySelectorAll(`.${language} .${keyboardState}`)
     letters.forEach(el => el.classList.add('active'))
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('language')) {
+        language = localStorage.getItem('language')
+        fillState()
+    }
+})
+
+window.addEventListener('beforeunload', () => {
+    localStorage.setItem('language', language)
+})
 
 function createElement(element) {
     const createdElement = document.createElement('button')

@@ -227,196 +227,196 @@
     {
         "name": "KeyQ",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "й",
+            "shiftUp": "Й",
+            "caps": "Й",
+            "shiftCaps": "й"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "q",
+            "shiftUp": "Q",
+            "caps": "Q",
+            "shiftCaps": "q"
         }
     },
     {
         "name": "KeyW",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "ц",
+            "shiftUp": "Ц",
+            "caps": "Ц",
+            "shiftCaps": "ц"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "w",
+            "shiftUp": "W",
+            "caps": "W",
+            "shiftCaps": "w"
         }
     },
     {
         "name": "KeyE",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "у",
+            "shiftUp": "У",
+            "caps": "У",
+            "shiftCaps": "у"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "e",
+            "shiftUp": "E",
+            "caps": "E",
+            "shiftCaps": "e"
         }
     },
     {
         "name": "KeyR",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "к",
+            "shiftUp": "К",
+            "caps": "К",
+            "shiftCaps": "к"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "r",
+            "shiftUp": "R",
+            "caps": "R",
+            "shiftCaps": "r"
         }
     },
     {
         "name": "KeyT",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "е",
+            "shiftUp": "Е",
+            "caps": "Е",
+            "shiftCaps": "е"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "t",
+            "shiftUp": "T",
+            "caps": "T",
+            "shiftCaps": "t"
         }
     },
     {
         "name": "KeyY",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "н",
+            "shiftUp": "Н",
+            "caps": "Н",
+            "shiftCaps": "н"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "y",
+            "shiftUp": "Y",
+            "caps": "Y",
+            "shiftCaps": "y"
         }
     },
     {
         "name": "KeyU",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "г",
+            "shiftUp": "Г",
+            "caps": "Г",
+            "shiftCaps": "г"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "u",
+            "shiftUp": "U",
+            "caps": "U",
+            "shiftCaps": "u"
         }
     },
     {
         "name": "KeyI",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "ш",
+            "shiftUp": "Ш",
+            "caps": "Ш",
+            "shiftCaps": "ш"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "i",
+            "shiftUp": "I",
+            "caps": "I",
+            "shiftCaps": "i"
         }
     },
     {
         "name": "KeyO",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "щ",
+            "shiftUp": "Щ",
+            "caps": "Щ",
+            "shiftCaps": "щ"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "o",
+            "shiftUp": "O",
+            "caps": "O",
+            "shiftCaps": "o"
         }
     },
     {
         "name": "KeyP",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "з",
+            "shiftUp": "З",
+            "caps": "З",
+            "shiftCaps": "з"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "p",
+            "shiftUp": "P",
+            "caps": "P",
+            "shiftCaps": "p"
         }
     },
     {
         "name": "BracketLeft",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "х",
+            "shiftUp": "Х",
+            "caps": "Х",
+            "shiftCaps": "х"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "[",
+            "shiftUp": "{",
+            "caps": "[",
+            "shiftCaps": "{"
         }
     },
     {
         "name": "BracketRight",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "ъ",
+            "shiftUp": "Ъ",
+            "caps": "Ъ",
+            "shiftCaps": "ъ"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "]",
+            "shiftUp": "}",
+            "caps": "]",
+            "shiftCaps": "}"
         }
     },
     {
         "name": "Backslash",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "\\",
+            "shiftUp": "/",
+            "caps": "\\",
+            "shiftCaps": "/"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "\\",
+            "shiftUp": "|",
+            "caps": "\\",
+            "shiftCaps": "|"
         }
     },
     {
@@ -452,46 +452,46 @@
     {
         "name": "KeyA",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "ф",
+            "shiftUp": "Ф",
+            "caps": "Ф",
+            "shiftCaps": "ф"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "a",
+            "shiftUp": "A",
+            "caps": "A",
+            "shiftCaps": "a"
         }
     },
     {
         "name": "KeyS",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "ы",
+            "shiftUp": "Ы",
+            "caps": "Ы",
+            "shiftCaps": "ы"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "s",
+            "shiftUp": "S",
+            "caps": "S",
+            "shiftCaps": "s"
         }
     },
     {
         "name": "KeyD",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "в",
+            "shiftUp": "В",
+            "caps": "В",
+            "shiftCaps": "в"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "d",
+            "shiftUp": "D",
+            "caps": "D",
+            "shiftCaps": "d"
         }
     },
     {
@@ -512,106 +512,106 @@
     {
         "name": "KeyG",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "п",
+            "shiftUp": "П",
+            "caps": "П",
+            "shiftCaps": "п"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "g",
+            "shiftUp": "G",
+            "caps": "G",
+            "shiftCaps": "g"
         }
     },
     {
         "name": "KeyH",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "р",
+            "shiftUp": "Р",
+            "caps": "Р",
+            "shiftCaps": "р"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "h",
+            "shiftUp": "H",
+            "caps": "H",
+            "shiftCaps": "h"
         }
     },
     {
         "name": "KeyJ",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "о",
+            "shiftUp": "О",
+            "caps": "О",
+            "shiftCaps": "о"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "j",
+            "shiftUp": "J",
+            "caps": "J",
+            "shiftCaps": "j"
         }
     },
     {
         "name": "KeyK",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "л",
+            "shiftUp": "Л",
+            "caps": "Л",
+            "shiftCaps": "л"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "k",
+            "shiftUp": "K",
+            "caps": "K",
+            "shiftCaps": "k"
         }
     },
     {
         "name": "KeyL",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "д",
+            "shiftUp": "Д",
+            "caps": "Д",
+            "shiftCaps": "д"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "l",
+            "shiftUp": "L",
+            "caps": "L",
+            "shiftCaps": "l"
         }
     },
     {
         "name": "Semicolon",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "ж",
+            "shiftUp": "Ж",
+            "caps": "Ж",
+            "shiftCaps": "ж"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": ";",
+            "shiftUp": ":",
+            "caps": ";",
+            "shiftCaps": ":"
         }
     },
     {
         "name": "Quote",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "э",
+            "shiftUp": "Э",
+            "caps": "Э",
+            "shiftCaps": "э"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "'",
+            "shiftUp": "\"",
+            "caps": "'",
+            "shiftCaps": "\""
         }
     },
     {
@@ -647,151 +647,151 @@
     {
         "name": "KeyZ",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "я",
+            "shiftUp": "Я",
+            "caps": "Я",
+            "shiftCaps": "я"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "z",
+            "shiftUp": "Z",
+            "caps": "Z",
+            "shiftCaps": "z"
         }
     },
     {
         "name": "KeyX",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "ч",
+            "shiftUp": "Ч",
+            "caps": "Ч",
+            "shiftCaps": "ч"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "x",
+            "shiftUp": "X",
+            "caps": "X",
+            "shiftCaps": "x"
         }
     },
     {
         "name": "KeyC",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "с",
+            "shiftUp": "С",
+            "caps": "С",
+            "shiftCaps": "с"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "c",
+            "shiftUp": "C",
+            "caps": "C",
+            "shiftCaps": "c"
         }
     },
     {
         "name": "KeyV",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "м",
+            "shiftUp": "М",
+            "caps": "М",
+            "shiftCaps": "м"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "v",
+            "shiftUp": "V",
+            "caps": "V",
+            "shiftCaps": "v"
         }
     },
     {
         "name": "KeyB",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "и",
+            "shiftUp": "И",
+            "caps": "И",
+            "shiftCaps": "и"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "b",
+            "shiftUp": "B",
+            "caps": "B",
+            "shiftCaps": "b"
         }
     },
     {
         "name": "KeyN",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "т",
+            "shiftUp": "Т",
+            "caps": "Т",
+            "shiftCaps": "т"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "n",
+            "shiftUp": "N",
+            "caps": "N",
+            "shiftCaps": "n"
         }
     },
     {
         "name": "KeyM",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "ь",
+            "shiftUp": "Ь",
+            "caps": "Ь",
+            "shiftCaps": "ь"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "m",
+            "shiftUp": "M",
+            "caps": "M",
+            "shiftCaps": "m"
         }
     },
     {
         "name": "Comma",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "б",
+            "shiftUp": "Б",
+            "caps": "Б",
+            "shiftCaps": "б"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": ",",
+            "shiftUp": "<",
+            "caps": ",",
+            "shiftCaps": "<"
         }
     },
     {
         "name": "Period",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": "ю",
+            "shiftUp": "Ю",
+            "caps": "Ю",
+            "shiftCaps": "ю"
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": ".",
+            "shiftUp": ">",
+            "caps": ".",
+            "shiftCaps": ">"
         }
     },
     {
         "name": "Slash",
         "rus": {
-            "caseDown": "а",
-            "shiftUp": "А",
-            "caps": "А",
-            "shiftCaps": "а"
+            "caseDown": ".",
+            "shiftUp": ",",
+            "caps": ".",
+            "shiftCaps": ","
         },
         "eng": {
-            "caseDown": "f",
-            "shiftUp": "F",
-            "caps": "F",
-            "shiftCaps": "f"
+            "caseDown": "/",
+            "shiftUp": "?",
+            "caps": "/",
+            "shiftCaps": "?"
         }
     },
     {
