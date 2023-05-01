@@ -1,0 +1,132 @@
+@import url("./fonts/stylesheet.css");
+$keyBackground: #aaa;
+$keyColor: #ffffff;
+$keyboardColor: #4a4a4a;
+
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 16px;
+    background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1613137427_74-p-staraya-zheltaya-bumaga-fon-123.jpg");
+}
+
+.textarea {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+    resize: vertical;
+
+    background-color: transparent;
+
+    outline: none;
+    border: none;
+    font-family: "B52", arial;
+    font-size: 20px;
+}
+
+.keyboard {
+    max-width: 718px;
+    margin: 0 auto;
+
+    border-radius: 15px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    background-color: $keyboardColor;
+
+    & .key {
+        font-size: 16px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        outline: none;
+        border: none;
+
+        min-height: 40px;
+        min-width: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 5px;
+        color: $keyColor;
+        background-color: $keyBackground;
+        transition: 0.3s ease;
+
+        & > span > span {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: $keyColor;
+                color: $keyBackground;
+            }
+        }
+
+        &.capsed,
+        &.hovered,
+        &:active {
+            border-radius: 7px;
+            background-color: rgba(202, 204, 144, 0.732);
+            color: white;
+        }
+    }
+
+    & .Enter,
+    & .ShiftRight {
+        width: 86px;
+    }
+
+    & .Backspace,
+    & .CapsLock,
+    & .ShiftLeft {
+        width: 120px;
+    }
+
+    & .Tab {
+        width: 50px;
+    }
+
+    & .Space {
+        width: 350px;
+    }
+
+    & .Delete {
+        width: 64px;
+    }
+
+    & .AltLeft,
+    & .AltRight,
+    & .ArrowUp,
+    & .ArrowLeft,
+    & .ArrowDown,
+    & .ArrowRight,
+    & .Backspace,
+    & .CapsLock,
+    & .ControlLeft,
+    & .ControlRight,
+    & .Delete,
+    & .Enter,
+    & .ShiftLeft,
+    & .ShiftRight,
+    & .Tab,
+    & .MetaLeft {
+        background-color: black;
+    }
+}
+
+.description {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}

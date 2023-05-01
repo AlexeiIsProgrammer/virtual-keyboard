@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'B52';
+    src: url('B52.woff2') format('woff2'),
+        url('B52.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
