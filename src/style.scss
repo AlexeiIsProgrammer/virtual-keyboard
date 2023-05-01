@@ -1,3 +1,4 @@
+@import url(https://allfont.ru/allfont.css?fonts=b52);
 $keyBackground: #aaa;
 $keyColor: #ffffff;
 $keyboardColor: #4a4a4a;
@@ -5,6 +6,7 @@ $keyboardColor: #4a4a4a;
 body {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 16px;
+    background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1613137427_74-p-staraya-zheltaya-bumaga-fon-123.jpg");
 }
 
 .textarea {
@@ -14,6 +16,13 @@ body {
     display: block;
     margin-bottom: 10px;
     resize: vertical;
+
+    background-color: transparent;
+
+    outline: none;
+    border: none;
+    font-family: "B52", arial;
+    font-size: 20px;
 }
 
 .keyboard {
@@ -68,20 +77,20 @@ body {
         &.hovered,
         &:active {
             border-radius: 7px;
-            background-color: rgb(255, 83, 83);
+            background-color: rgba(202, 204, 144, 0.732);
             color: white;
         }
     }
 
     & .Enter,
     & .ShiftRight {
-        width: 76px;
+        width: 86px;
     }
 
     & .Backspace,
     & .CapsLock,
     & .ShiftLeft {
-        width: 110px;
+        width: 120px;
     }
 
     & .Tab {
@@ -89,11 +98,11 @@ body {
     }
 
     & .Space {
-        width: 340px;
+        width: 350px;
     }
 
     & .Delete {
-        width: 44px;
+        width: 64px;
     }
 
     & .AltLeft,

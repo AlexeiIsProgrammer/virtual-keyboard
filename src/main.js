@@ -80,7 +80,7 @@ function insertAtCursor(myField, myValue) {
 function createTextArea() {
     textarea = document.createElement('textarea')
     textarea.className = 'textarea'
-    textarea.rows = 10
+    textarea.rows = 15
 
     return textarea
 }

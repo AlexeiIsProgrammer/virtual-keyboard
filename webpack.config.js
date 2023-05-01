@@ -10,7 +10,7 @@ const mode = process.env.NODE_ENV || 'development';
 
 const devMode = mode === 'development';
 
-const target = devMode ? 'web' : 'browserslist'; 
+const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
 module.exports = {
@@ -24,7 +24,7 @@ module.exports = {
     entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        clean:true,
+        clean: true,
         filename: 'index.js',
     },
     module: {
@@ -49,7 +49,7 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            postcssOptions:  {
+                            postcssOptions: {
                                 plugins: [postcss],
                             }
                         }
@@ -60,7 +60,7 @@ module.exports = {
             {
                 test: /\.(svg|jpg|jpeg|png|gif|ico)$/,
                 type: 'asset/resource',
-            }
+            },
         ]
     },
     plugins: [
