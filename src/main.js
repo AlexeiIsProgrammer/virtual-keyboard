@@ -333,8 +333,6 @@ getKeys().then(keysArr => {
             insertedValue = '\n'
         }
 
-        //  Вставка значения
-
         insertAtCursor(textarea, insertedValue)
     })
 
