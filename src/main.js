@@ -30,6 +30,7 @@ function deleteAfter(myField) {
     myFieldInner.value = myFieldInner.value.substring(0, startPos)
         + myFieldInner.value.substring(endPos + 1, myFieldInner.value.length);
 
+    myFieldInner.focus();
     myField.setSelectionRange(cursorPos, cursorPos)
 }
 
@@ -38,14 +39,12 @@ function deleteBefore(myField) {
     const startPos = myFieldInner.selectionStart;
     const endPos = myFieldInner.selectionEnd;
 
-    if (startPos === 0)
-        return
-
     const cursorPos = myFieldInner.value.substring(0, startPos - 1).length
 
     myFieldInner.value = myFieldInner.value.substring(0, startPos - 1)
         + myFieldInner.value.substring(endPos, myFieldInner.value.length);
 
+    myFieldInner.focus();
     myField.setSelectionRange(cursorPos, cursorPos)
 }
 
@@ -113,6 +112,60 @@ window.addEventListener('beforeunload', () => {
     localStorage.setItem('language', language)
 })
 
+function keyClickHandler(key) {
+    let elementText = key.querySelector(`span.active`).innerHTML
+
+    if (elementText === 'Alt' || elementText === 'Ctrl' || elementText === 'Win') {
+        return
+    }
+
+    if (elementText === 'Backspace') {
+        deleteBefore(textarea)
+        return
+    }
+
+    if (elementText === 'Del') {
+        deleteAfter(textarea)
+        return
+    }
+
+    if (elementText === 'Tab') {
+        elementText = '\t'
+    }
+
+    if (elementText === 'Enter') {
+        elementText = '\n'
+    }
+
+    if (elementText === 'CapsLock') {
+
+        if (keyboardState === 'caps') {
+            key.classList.remove('capsed')
+            keyboardState = 'caseDown'
+        } else if (keyboardState === 'shiftUp') {
+            key.classList.add('capsed')
+            keyboardState = 'shiftCaps'
+        }
+        else if (keyboardState === 'shiftCaps') {
+            key.classList.remove('capsed')
+            keyboardState = 'shiftUp'
+        } else {
+            key.classList.add('capsed')
+            keyboardState = 'caps'
+        }
+
+        fillState()
+
+        return
+    }
+
+    if (elementText === 'Shift') {
+        return
+    }
+
+    insertAtCursor(textarea, elementText)
+}
+
 function createElement(element) {
     const createdElement = document.createElement('button')
     createdElement.className = `key ${element.name}`
@@ -162,60 +215,8 @@ function createElement(element) {
     createdElement.append(rus, eng)
 
     createdElement.addEventListener('click', () => {
-
-        let elementText = createdElement.querySelector('span.active').innerHTML
-
-        if (elementText === 'Alt' || elementText === 'Ctrl') {
-            return
-        }
-
-        if (elementText === 'Backspace') {
-            deleteBefore(textarea)
-            return
-        }
-
-        if (elementText === 'Del') {
-            deleteAfter(textarea)
-            return
-        }
-
-        if (elementText === 'Tab') {
-            elementText = '\t'
-        }
-
-        if (elementText === 'Enter') {
-            elementText = '\n'
-        }
-
-        if (elementText === 'CapsLock') {
-
-            if (keyboardState === 'caps') {
-                createdElement.classList.remove('capsed')
-                keyboardState = 'caseDown'
-            } else if (keyboardState === 'shiftUp') {
-                createdElement.classList.add('capsed')
-                keyboardState = 'shiftCaps'
-            }
-            else if (keyboardState === 'shiftCaps') {
-                createdElement.classList.remove('capsed')
-                keyboardState = 'shiftUp'
-            } else {
-                createdElement.classList.add('capsed')
-                keyboardState = 'caps'
-            }
-
-            fillState()
-
-            return
-        }
-
-        if (elementText === 'Shift') {
-            return
-        }
-
-        insertAtCursor(textarea, elementText)
+        keyClickHandler(createdElement)
     })
-
 
     createdElement.addEventListener('mousedown', () => {
         const elementText = createdElement.querySelector('span.active').innerHTML
@@ -273,7 +274,7 @@ getKeys().then(keysArr => {
             return
         }
 
-        if (e.altKey || e.ctrlKey) {
+        if (e.altKey || e.ctrlKey || e.metaKey) {
             return
         }
 
