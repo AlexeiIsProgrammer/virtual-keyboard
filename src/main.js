@@ -184,7 +184,6 @@ function createElement(element) {
         }
 
         if (elementText === 'Enter') {
-            console.log('ent');
             elementText = '\n'
         }
 
@@ -268,7 +267,6 @@ getKeys().then(keysArr => {
         let insertedValue = elementName.querySelector('.active').innerHTML
 
         if (e.altKey && e.ctrlKey) {
-            console.log('Смена');
             language = language === 'rus' ? 'eng' : 'rus'
             fillState()
 
@@ -329,7 +327,6 @@ getKeys().then(keysArr => {
         }
 
         if (e.key === 'Enter') {
-            console.log('ent');
             insertedValue = '\n'
         }
 
